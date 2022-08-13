@@ -229,15 +229,15 @@ module MUX(
 endmodule
 
 module two_to_one_multiplexer(
-    input s,
-    input x,
-    input y,
-    output o
+	input s,
+	input x,
+	input y,
+	output o
 );
-    wire t1, t2;
-    and(t1, s, y);
-    and(t2, ~s, x);
-    or(o, t1, t2);
+	wire t1, t2;
+	and(t1, s, y);
+	and(t2, ~s, x);
+	or(o, t1, t2);
 endmodule
 
 module call_mux(
