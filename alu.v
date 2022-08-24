@@ -2,20 +2,13 @@ module alu(
 	input [7:0] A,
 	input [7:0] B,
 	input [3:0] op_sel,
-	output [7:0] adda_result,
-	output [7:0] subz_result,
-	output [7:0] anda_result,
-	output [7:0] ora_result,
-	output [7:0] mova_result,
-	output [7:0] shftla_result,
-	output [7:0] shftra_result,
-	output [7:0] incr_result,
-	output [7:0] decr_result,
 	output [7:0] result,
-	output adda_carryout, subz_carryout, incr_carryout, decr_carryout,
-	output C, Z, N, OV,
-	output A_sign, B_sign
+	output C, Z, N, OV
 );	
+
+	wire [7:0] adda_result, subz_result,anda_result, ora_result, mova_result,
+	shftla_result, shftra_result, incr_result, decr_result;
+	wire adda_carryout, subz_carryout, incr_carryout, decr_carryout, A_sign, B_sign;
 	
 	//assign signs of A and B
 	or(A_sign, A[7], 1'b0);
