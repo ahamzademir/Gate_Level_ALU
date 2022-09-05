@@ -1,8 +1,8 @@
 module instruction_register(
 	input reset,
 	input clk,
-	input [11:0] IR_input,
-	output reg [11:0] IR_output
+	input [13:0] IR_input,
+	output reg [13:0] IR_output
 );	
 	
 	always @(posedge clk)
